@@ -116,7 +116,7 @@ app.post('/api/persons', (request, response) => {
   contacts.push(contact)
 
 
-  response.send(contacts)
+  response.send(contact)
 
 
 })

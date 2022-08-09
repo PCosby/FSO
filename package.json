@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "cd ../part2/phonebook/ && npm run build && Xcopy /E build ..\\..\\part3\\build\\",
+    "deploy": "npm run build:ui && git add . && git commit -m deploy && git push && git push heroku main",
+    "logs": "heroku logs --tail"
   },
   "author": "",
   "license": "ISC",
