@@ -8,6 +8,8 @@ const app = express()
 
 app.use(express.json())
 
+app.use(express.static('build'))
+
 morgan.token('person', function (req, res, m) {
 
   return m === "POST" ? JSON.stringify(req.body) : ""
